@@ -38,12 +38,26 @@ Ex: addKeyPowerIndex(arrOfObj2)
 ]   
 */
 
-function addKeyPowerIndex() {
-  // WRITE YOUR CODE UNDER THIS LINE  
+// function addKeyPowerIndex(x,b) {
 
-}
+//   // WRITE YOUR CODE UNDER THIS LINE  
+// g={};
+// x.forEach(x=>x*x+b) g[x]=x[b[x]];
 
-
+// return g
+// }
+// console.log(addKeyPowerIndex([
+//   { a: 12 },
+//   { b: 5 },
+//   { c: 16 },
+//   { d: 4 },
+//   { e: 3 }
+// ],[
+//   { a: 'cat' },
+//   { b: 'dog' },
+//   { c: 'duck' }
+// ]))
+// i need to connect betwwen first object with second object that make coolection object betwwen and the first object should be squared. 
 
 
 
@@ -63,13 +77,15 @@ Ex: decreseBy(arrOfnum1,10)
 Ex: decreseBy(arrOfNum1,-6)
 => [83, 11, 39]
 */
+var arrOfNum1 = [77,5,33]
+function decreseBy(arr,num) {
 
-function decreseBy() {
   // WRITE YOUR CODE UNDER THIS LINE 
-
+return arr.map(x=>x-num)
 }
 
-
+console.log(decreseBy(arrOfNum1,10))
+console.log(decreseBy(arrOfNum1,-6))
 
 
 
@@ -101,10 +117,17 @@ Ex: nameLongerThan(arrOfObj4,6)
   { name: "elizabeth"}
 ]
 */
+var arrOfObj4 = [
+  { name: "alex" },
+  { name: "mercer"},
+  { name: "alice" },
+  { name: "zaheer"},
+  { name: "elizabeth"}]
 
-function nameLongerThan() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function nameLongerThan(arr, number) {
+  return arr.filter(str => str.length < number);
 }
+console.log(nameLongerThan( arrOfObj4,4))
 
 
 
@@ -130,12 +153,27 @@ Ex: avgLength(arrOfObj4,"name")
 => 6
 
 Ex: avgLength(arrOfObj4,"food")
-=> 6.8
-*/
 
-function avgLength() {
+=> 6.8
+
+i need to select the lenghth of what i need to check the long and take the sumation and take avaerge of array 
+
+*/
+var arrOfObj4 = [
+  { name: "alex", food: "fried chiken" },
+  { name: "mercer", food: "pizaa" },
+  { name: "alice", food: "burger" },
+  { name: "zaheer", food: "hot dog" },
+  { name: "elizabeth", food: "eggs" }
+]
+function avgLength(arr,element) {
+
+
+  return arr.reduce((acc, element) =>  acc + element,0) / arr.length;
+}
+console.log(avgLength(arrOfObj4,"name"))
   // WRITE YOUR CODE UNDER THIS LINE         
 
-}
+
 
 // Good luck :)
